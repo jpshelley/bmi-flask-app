@@ -52,4 +52,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Jetbrains
+.idea/
+
+
 *.DS_Store
