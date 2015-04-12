@@ -1,5 +1,4 @@
 from app import db
-from sqlalchemy.dialects.postgresql import JSON
 
 
 class Result(db.Model):
@@ -8,10 +7,12 @@ class Result(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     height = db.Column(db.Integer)
     weight = db.Column(db.Integer)
+    bmi = db.Column(db.Integer)
 
-    def __init__(self, height, weight):
+    def __init__(self, height, weight, bmi):
         self.height = height
         self.weight = weight
+        self.bmi = bmi
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
